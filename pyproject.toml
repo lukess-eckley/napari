@@ -348,6 +348,9 @@ namespaces = false
 napari_builtins = [
     "builtins.yaml",
 ]
+"napari.web" = [
+    "static/*",
+]
 
 
 [tool.setuptools_scm]
