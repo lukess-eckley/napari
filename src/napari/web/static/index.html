@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>napari Web Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="viewer-title">napari Viewer</h1>
+      <p id="viewer-status">Loading viewer state…</p>
+    </header>
+    <main>
+      <section class="summary">
+        <h2>Viewer</h2>
+        <ul>
+          <li><strong>Theme:</strong> <span id="viewer-theme">–</span></li>
+          <li><strong>Dimensions:</strong> <span id="viewer-ndisplay">–</span></li>
+          <li><strong>Axis labels:</strong> <span id="viewer-axes">–</span></li>
+          <li><strong>Current step:</strong> <span id="viewer-step">–</span></li>
+          <li><strong>Canvas size:</strong> <span id="viewer-canvas">–</span></li>
+        </ul>
+      </section>
+      <section class="layers">
+        <h2>Layers</h2>
+        <div id="layers"></div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        This experimental interface provides a read-only view of an existing
+        napari session.
+      </p>
+    </footer>
+    <script src="app.js" defer></script>
+  </body>
+</html>

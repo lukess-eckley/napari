@@ -53,7 +53,10 @@ from _pytest.pathlib import bestrelpath
 from IPython.core.history import HistoryManager
 from npe2 import PackageMetadata
 from packaging.version import parse as parse_version
-from pytest_pretty import CustomTerminalReporter
+try:  # pragma: no cover - optional dependency
+    from pytest_pretty import CustomTerminalReporter
+except ModuleNotFoundError:  # pragma: no cover - fallback for constrained envs
+    from _pytest.terminal import TerminalReporter as CustomTerminalReporter
 
 from napari.components import LayerList
 from napari.layers import Image, Labels, Points, Shapes, Vectors
